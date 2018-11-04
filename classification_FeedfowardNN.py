@@ -118,10 +118,7 @@ Computes the mean of elements across dimensions of a tensor.
 --------------------------------------------------
 Softmax: generalization of logistic regression used for multi-class classification
 Cross entropy: Quantify the difference between two probability distributions
-Logits simply means that the function operates on the unscaled output of 
-earlier layers and that the relative scale to understand the units is linear. 
-It means, in particular, the sum of the inputs may not equal 1, that the values 
-are not probabilities (you might have an input of 5).
+Tensorflow's logit is defined as the output of a neuron without applying activation function.
 
 - AdamOptimizer class (tf.train):
 ----------------------------------
