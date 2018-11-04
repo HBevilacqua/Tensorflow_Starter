@@ -121,10 +121,8 @@ Y_feed = tf.placeholder(tf.float32, shape=[None, n_classes], name="Y_feed")
 
 # -------- Creating the model --------
 
-# out_dense = sigmoid(X.W + b)
-hidden_layer = tf.layers.dense(X_feed, units=n_inputs_dataset, activation=tf.nn.sigmoid)
-output_layer = tf.layers.dense(hidden_layer, units=n_classes, activation=tf.nn.sigmoid)
-prediction = tf.nn.softmax(output_layer)
+hidden_layer = tf.layers.dense(X_feed, units=n_inputs_dataset, activation=tf.nn.relu)
+prediction = tf.layers.dense(hidden_layer, units=n_classes, activation=tf.nn.softmax)
 
 # -------- Defining the loss function --------
 
