@@ -30,8 +30,7 @@ with tf.Session() as sess:
     prediction = tf.get_collection('prediction')[0]
 
     # Making a prediction by feeding placeholders as {'PlaceholderName:0': data}
-    print("\nPrediction: ", sess.run(prediction, feed_dict={'X_feed:0': mnist.test.images,
-                                                            'Y_feed:0': mnist.test.labels}))
+    print("\nPrediction: ", sess.run(prediction, feed_dict={'X_feed:0': mnist.test.images}))
 
 # -------- Testing the trained model --------
 
